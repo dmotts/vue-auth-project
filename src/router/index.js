@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from './views/Home.vue'
+import Home from '@/views/Home'
 import Auth from '@/views/Auth'
 import Dashboard from '@/views/Dashboard'
 
