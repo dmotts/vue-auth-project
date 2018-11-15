@@ -8,7 +8,7 @@ import Dashboard from '@/views/Dashboard'
 
 Vue.use(Router)
 
-export default new Router({
+export const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -39,7 +39,8 @@ export default new Router({
     }
   ]
 })
-.beforeEach((to, from, next) => {
+
+router.beforeEach((to, from, next) => {
   let currentUser = auth.user()
   let requireAuth = to.matched.some(record => record.meta.requireAuth)
   let guestOnly = to.matched.some(record => record.meta.guestOnly)
