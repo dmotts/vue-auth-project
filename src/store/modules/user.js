@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import auth from '@/auth'
 
 const state = {
     user: null
@@ -16,7 +17,9 @@ const mutations = {
 }
 
 const actions = {
-    
+    setCurrentUser: ({ commit }) => {
+        commit('setUser', auth.user())
+    }
 }
 
 export default {
