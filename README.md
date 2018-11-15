@@ -1,4 +1,4 @@
-# vue-auth-project
+# VueJS Firebase Authentication Project
 
 ## Project setup
 ```
