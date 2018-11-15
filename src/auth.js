@@ -28,7 +28,7 @@ const auth = {
             ]
         }
         
-        this.ui = new firebaseui.authAuthUI(firebase.auth());
+        this.ui = new firebaseui.auth.AuthUI(firebase.auth());
         
         firebase.auth().onAuthStateChanged((user) => {
             this.context.$store.dispatch('user/setCurrentUser')
